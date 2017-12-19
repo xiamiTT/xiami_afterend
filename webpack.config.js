@@ -44,6 +44,17 @@ module.exports = {
                 use: ['babel-loader'],
                 exclude: /node_modules/ // 第三方的js, 不需要语法转换, 所以排除掉
             },
+            // 静态资源引入模块
+            {
+                test: /\.(gif|png|jpg|svg|mp3|mp4|avi|woff|ttf)/,
+                use: [
+                    // 小于10KB的才打包
+                    {
+                        loader: 'url-loader',
+                        options: { limit: 10240 }
+                    }
+                ]
+            },
 
             // vue模块
             {

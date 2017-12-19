@@ -1,0 +1,26 @@
+html,
+body,
+main {
+  height: 100%;
+}
+html .router-link-active,
+body .router-link-active,
+main .router-link-active {
+  text-decoration: none;
+  color: #fff;
+}
+html .el-table thead tr,
+body .el-table thead tr,
+main .el-table thead tr {
+  background-color: #ccc;
+}
+html [class^=el-icon-],
+body [class^=el-icon-],
+main [class^=el-icon-] {
+  color: rgba(0, 0, 0, 0.3);
+}
+html [class^=el-icon-].active,
+body [class^=el-icon-].active,
+main [class^=el-icon-].active {
+  color: #000;
+}
