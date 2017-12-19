@@ -7,6 +7,5 @@ export default function(to, from, next) {
     //如果去往登陆页面
     //登陆 -》 自动跳转首页 -》调用next('/)
     //未登陆 -》允许访问 -》调用next()
-    // 如果去往非登陆页面  同理
-    next('/')
+    // 如果去往非登陆页面  同理    git
 }
