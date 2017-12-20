@@ -3,7 +3,7 @@
        
         <!-- 面包屑导航 -->
         <el-breadcrumb separator-class="el-icon-arrow-right">
-            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item :to="{ name:'gcta' }">首页</el-breadcrumb-item>
             <el-breadcrumb-item>商品管理</el-breadcrumb-item>
             <el-breadcrumb-item>内容管理</el-breadcrumb-item>
             <el-breadcrumb-item>商品列表</el-breadcrumb-item>
@@ -13,7 +13,9 @@
         <section class="list_util">
             <!-- 左边按钮 -->
             <div class="list_util_btns">
-                <el-button plain size="small" icon="el-icon-plus">添加</el-button>
+               
+    <el-button plain size="small" icon="el-icon-check" @click="add">添加</el-button >
+
                 <el-button plain size="small" icon="el-icon-check">全选</el-button>
                 <el-button plain size="small" icon="el-icon-delete">删除</el-button>
             </div>
@@ -49,7 +51,10 @@
 
             <el-table-column width="100" label="操作">
                 <template slot-scope="scope">
-                    <a href="">修改</a>
+                   
+             
+    <router-link :to="{name: 'gcte', params: {id: scope.row.id}}">修改</router-link>
+
                 </template>
             </el-table-column>
         </el-table>

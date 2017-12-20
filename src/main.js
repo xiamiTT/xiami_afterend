@@ -22,9 +22,10 @@ import routerConfig from './router';
 //导入配置后的axios 与 api 注入到vue的原型当中，这样 所有的组件就可以通过this吊桶
 
 import axios from './js/axios_config.js';
-import api from './js/api_config.js';
+import api, { domain } from './js/api_config.js';
 Vue.prototype.$http = axios;
 Vue.prototype.$api = api;
+Vue.prototype.$apiDomain = domain;
 
 //导入路由守卫函数，创建路由实例， 配置守卫做登陆校验
 import routerGuard from './router/guard.js';
@@ -37,5 +38,6 @@ new Vue({
     el: '#app',
 
     render: c => c(AppComponent),
-    router: new VueRouter(routerConfig)
+    router: vueRouter
+
 })
